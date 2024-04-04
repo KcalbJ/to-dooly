@@ -57,15 +57,15 @@ function Hero() {
                             {task.name}
                         </label>
                         <button className="h-6 w-6 rounded-lg" onClick={() => deleteTask(task.id)}>
-                            <FaTrash className="h-4 w-4" />
+                            <FaTrash className="h-4 w-4 text-red-400" />
                             <span className="sr-only">Delete task</span>
                         </button>
                     </div>
                 ))}
             </main>
-            <footer className="border-t p-4 flex items-center gap-4">
+            <footer className="border-t p-4 flex justify-center items-center gap-4">
                 <span>{tasks.length} tasks remaining</span>
-                <button onClick={clearCompletedTasks}>Clear completed</button>
+                <button className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" onClick={clearCompletedTasks}>Clear completed</button>
             </footer>
         </>
     );
